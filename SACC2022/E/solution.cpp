@@ -2,7 +2,7 @@
 using namespace std;
 
 #define ll long long
-#define mod 1000000007
+#define MOD 1000000007
 #define N 100007
 
 int f[N], num[N], n;
@@ -15,7 +15,23 @@ int gcd(int a, int b) {
     return b ? gcd(b, a % b) : a;
 }
 
+int p[N], p_num;
+bool is_p[N];
+
+void prime_init() {
+    memset(is_p, 1, sizeof(is_p));
+    for (int i = 2; i < N; i++) {
+        if (is_p[i]) p[p_num++] = i;
+        for (int j = 0; j < p_num; j++) {
+            if (i * p[j] >= N) break;
+            is_p[i * p[j]] = 0;
+            if (i % p[j] == 0) break;
+        }
+    }
+}
+
 int main() {
+    prime_init();
     int t;
     scanf("%d", &t);
     while (t--) {
@@ -36,23 +52,34 @@ int main() {
             f[fi] = fj, num[fj] += num[fi];
         }
 
-        vector<int> vec;
+        unordered_map<int, int> mp;
         for (int i = 1; i <= n; i++) {
-            if (find(i) == i) {
-                vec.push_back(num[i]);
+            int fi = find(i);
+            if (fi != i) continue;
+            int x = num[fi];
+            for (int i = 0; i < p_num && p[i] * p[i] <= x; i++) {
+                int num = 0;
+                while (x % p[i]) {
+                    x /= p[i];
+                    num++;
+                }
+                if (num > 0) {
+                    mp[p[i]] = max(mp[p[i]], num);
+                }
+            }
+            if (x > 1) {
+                mp[x] = max(mp[x], 1);
             }
         }
 
-        int m = vec.size();
-        int div = vec[0];
-        for (int i = 1; i < m; i++) {
-            div = gcd(div, vec[i]);
+        ll ans = 1;
+        for (auto &it : mp) {
+            int num = it.second;
+            while (num--) {
+                ans = ans * it.first % MOD;
+            }
         }
 
-        ll ans = vec[0];
-        for (int i = 1; i < m; i++) {
-            ans = ans * (vec[i] / div) % mod;
-        }
         printf("%lld\n", ans);
     }
     return 0;
