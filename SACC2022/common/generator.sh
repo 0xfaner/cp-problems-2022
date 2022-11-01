@@ -1,4 +1,4 @@
-buildgeneratorExecFile() {
+buildGeneratorExecFile() {
     printfInfo "compiling generator.."
     printfInfo "generator code path: ${generatorCppFilePath}"
     printfInfo "generator exec path: ${generatorExecFilePath}"
@@ -10,7 +10,7 @@ buildgeneratorExecFile() {
     printfInfo "compiling generator success"
 }
 
-buildsolutionExecFile() {
+buildSolutionExecFile() {
     printfInfo "compiling solution.."
     printfInfo "solution code path: ${solutionCppFilePath}"
     printfInfo "solution exec path: ${solutionExecFilePath}"

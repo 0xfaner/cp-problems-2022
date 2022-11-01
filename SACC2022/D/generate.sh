@@ -17,8 +17,8 @@ source ${scriptRoot}/../common/color.sh
 source ${scriptRoot}/../common/message.sh
 source ${scriptRoot}/../common/generator.sh
 
-buildgeneratorExecFile
-buildsolutionExecFile
+buildGeneratorExecFile
+buildSolutionExecFile
 createDataRoot
 
 array=(10 20 50 100 1000)

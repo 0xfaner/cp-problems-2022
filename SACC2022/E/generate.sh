@@ -17,8 +17,8 @@ source ${scriptRoot}/../common/color.sh
 source ${scriptRoot}/../common/message.sh
 source ${scriptRoot}/../common/generator.sh
 
-buildgeneratorExecFile
-buildsolutionExecFile
+buildGeneratorExecFile
+buildSolutionExecFile
 createDataRoot
 
 
