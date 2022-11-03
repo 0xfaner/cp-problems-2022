@@ -16,14 +16,12 @@
 
 $$
 \min_{a+b+c+d=4}
-\left\{
-\begin{aligned}
-m'_a + s_b + p_c + z_d\\
-m_a + s'_b + p_c + z_d\\
-m_a + s_b + p'_c + z_d\\
+\begin{cases}
+m'_a + s_b + p_c + z_d \\
+m_a + s'_b + p_c + z_d \\
+m_a + s_b + p'_c + z_d \\
 m_a + s_b + p_c + z'_d
-\end{aligned}
-\right.
+\end{cases}
 $$
 
 **七对子型**
