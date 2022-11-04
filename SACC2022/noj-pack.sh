@@ -3,7 +3,7 @@ scriptRoot=$(dirname "$0" | sed 's?\\?\/?g')
 NOJRoot=$scriptRoot/NOJ
 
 problemRoot=$scriptRoot/NOJ/problems
-solutionRoot=$scriptRoot/NOJ/solution
+solutionRoot=$scriptRoot/NOJ/solutions
 dataRoot=$scriptRoot/NOJ/data
 
 cleanDir() {
