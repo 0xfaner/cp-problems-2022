@@ -6,4 +6,4 @@
 
 具体地，因为总价值 $\sum v \leq n \times \max \{n\} = 10^5$，我们对于每一个价值 $j$，枚举所有的物品 $i$，尝试更新 $f_j$ 即可。
 
-时间复杂度 $\mathcal{O}(n \times \sum{v})$。
+时间复杂度 $\mathcal{O}(n \cdot n \cdot \max{v})$。
