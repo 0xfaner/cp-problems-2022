@@ -11,23 +11,21 @@ int main(int argc, char** argv) {
     int n = opt<int>("n");
     assert(1 <= n && n <= 1000);
 
-    int m = opt<int>("m");
-    assert(1 <= m && m <= 1000000000);
-
     int maxm = opt<int>("maxm");
-    assert(1 <= maxm && maxm <= m && maxm <= 1000000000);
+    assert(1 <= maxm && maxm <= 1000000000);
 
     int zero_weight = opt<int>("zero_weight");
 
     println(t);
 
     while (t--) {
+        int m = rnd.next(1, maxm);
         println(n, m);
         std::vector<int> vec(n);
         for (int i = 1; i < n - 1; i++) {
             int flag = rnd.wnext(2, -zero_weight);
             if (flag) {
-                vec[i] = rnd.next(-maxm, maxm);
+                vec[i] = rnd.next(-m, m);
             } else {
                 vec[i] = 0;
             }
