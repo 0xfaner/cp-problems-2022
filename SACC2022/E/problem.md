@@ -22,7 +22,7 @@
 
 第二行 $n$ 个整数 $t_i$，表示每个魔法节点的传送目标（$1 \leq t_i \leq n$）。
 
-输入数据保证 $\sum n \leq 5 \times 10^5$。
+输入数据保证 $\sum n \leq 5 \cdot 10^5$。
 
 ## Output
 
