@@ -6,7 +6,6 @@ typedef long long int64;
 #define popcount __builtin_popcountll
 
 int main() {
-    auto startTime = clock();
     int t;
     scanf("%d", &t);
     while (t--) {
@@ -23,7 +22,5 @@ int main() {
         }
         printf("%lld\n", num);
     }
-    auto endTime = clock();
-    printf("%lf\n", double(endTime - startTime) / 1000);
     return 0;
 }
