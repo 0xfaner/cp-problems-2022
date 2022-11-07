@@ -25,10 +25,11 @@ createDataFile -kind 1 -n 8
 createDataFile -kind 1 -n 9
 createDataFile -kind 1 -n 10
 
-createDataFile -kind 0 -t 10000 -maxn 50
-createDataFile -kind 0 -t 5000 -maxn 100
-createDataFile -kind 0 -t 1000 -maxn 500
-createDataFile -kind 0 -t 500 -maxn 1000
+createDataFile -kind 2 -t 10 -maxn 1000
+createDataFile -kind 2 -t 10 -maxn 1000
+createDataFile -kind 2 -t 10 -maxn 1000
+createDataFile -kind 2 -t 10 -maxn 1000
+
 createDataFile -kind 0 -t 100 -maxn 5000
 createDataFile -kind 0 -t 50 -maxn 10000
 createDataFile -kind 0 -t 5 -maxn 100000
