@@ -13,7 +13,7 @@ int main(int argc, char** argv) {
         auto perm = rnd.perm(9);
         for (int i = 0; i < 9; i++) {
             println(1);
-            int x = perm[i] / 3, y = perm[i] % 3;
+            int x = perm[i] / 3 + 1, y = perm[i] % 3 + 1;
             println(x, y);
         }
     } else if (kind == 1) {
@@ -25,7 +25,7 @@ int main(int argc, char** argv) {
             auto perm = rnd.perm(9);
             println(n);
             for (int i = 0; i < n; i++) {
-                int x = perm[i] / 3, y = perm[i] % 3;
+                int x = perm[i] / 3 + 1, y = perm[i] % 3 + 1;
                 println(x, y);
             }
         }

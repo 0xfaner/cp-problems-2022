@@ -73,17 +73,17 @@ int main() {
     scanf("%d", &t);
     while (t--) {
         scanf("%d", &n);
-        int s = 0;
         int winner = -1;
+        int state = 0;
         for (int i = 0, x, y; i < n; i++) {
             scanf("%d%d", &x, &y);
             if (winner == -1) {
-                s += base[x * 3 + y - 4] * (i % 2 + 1);
-                winner = calcWinner(s);
+                state += base[x * 3 + y - 4] * (i % 2 + 1);
+                winner = calcWinner(state);
             }
         }
         if (winner == -1) {
-            winner = getWinner(s);
+            winner = getWinner(state);
         }
         if (winner == -1) {
             puts("Draw");
