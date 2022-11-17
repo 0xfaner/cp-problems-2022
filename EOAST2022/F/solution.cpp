@@ -26,7 +26,7 @@ int main() {
             scanf("%lld", &arr[i]);
             sum += arr[i];
         }
-        int64 left = 0, right = sum / (n - 1);
+        int64 left = 0, right = sum / (n - 1) + 1;
         while (left < right) {
             int64 mid = (left + right) >> 1;
             if (check(mid)) {
@@ -35,7 +35,7 @@ int main() {
                 right = mid;
             }
         }
-        printf("%lld\n", left);
+        printf("%lld\n", left - 1);
     }
     return 0;
 }

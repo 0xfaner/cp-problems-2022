@@ -30,7 +30,6 @@ createDataFile -t 10000 -maxn 2000000
 createDataFile -t 10000 -maxn 2000000
 createDataFile -t 10000 -maxn 2000000
 
-createDataFile -t 500000 -maxn 1000000000000
-createDataFile -t 500000 -maxn 1000000000000
-createDataFile -t 500000 -maxn 1000000000000
-
+createDataFile -t 200000 -maxn 1000000000000000000
+createDataFile -t 200000 -maxn 1000000000000000000
+createDataFile -t 200000 -maxn 1000000000000000000
