@@ -21,14 +21,16 @@ buildGeneratorExecFile
 buildSolutionExecFile
 createDataRoot
 
-createDataFile -t 1 -n 1000000 -maxc a
+createDataFile -t 1 -n 1000000 -kind 0 -maxc a
+createDataFile -t 1 -n 1000000 -kind 0 -maxc z
 
-createDataFile -t 1000 -n 1000 -maxc b
+createDataFile -t 100 -n 10000 -kind 1 -maxc b
+createDataFile -t 100 -n 10000 -kind 1 -maxc c
+createDataFile -t 100 -n 10000 -kind 1 -maxc d
+createDataFile -t 100 -n 10000 -kind 1 -maxc z
 
-createDataFile -t 1000 -n 1000 -maxc c
+createDataFile -t 1000 -n 1000 -kind 1 -maxc b
+createDataFile -t 1000 -n 1000 -kind 1 -maxc c
+createDataFile -t 1000 -n 1000 -kind 1 -maxc d
+createDataFile -t 1000 -n 1000 -kind 1 -maxc z
 
-createDataFile -t 1000 -n 1000 -maxc d
-
-for i in $(seq 4 9); do
-    createDataFile -t 1 -n 1000000 -maxc z
-done
