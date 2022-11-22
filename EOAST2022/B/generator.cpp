@@ -18,13 +18,13 @@ int main(int argc, char** argv) {
 
         println(t);
         while (t--) {
-            int n = rnd.wnext(1, maxn, 8);
+            int n = rnd.wnext(3, maxn, 8);
             println(n);
 
             std::string format = "[1-9]{" + std::to_string(n) + "}";
             std::string str = rnd.next(format);
 
-            int m = rnd.next(n / 2);
+            int m = rnd.next((n - 1) / 2);
             for (auto& add : rnd.distinct(m, n)) str[add] = '+';
 
             println(str);
@@ -49,7 +49,7 @@ int main(int argc, char** argv) {
 
         println(t);
         while (t--) {
-            int n = rnd.wnext(1, maxn, 8);
+            int n = rnd.wnext(3, maxn, 8);
             println(n);
 
             std::string format = "[1-9]{" + std::to_string(n) + "}";
