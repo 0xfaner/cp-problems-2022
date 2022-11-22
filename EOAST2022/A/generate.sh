@@ -21,15 +21,15 @@ buildGeneratorExecFile
 buildSolutionExecFile
 createDataRoot
 
-createDataFile -kind 1 -maxn 100
-createDataFile -kind 2 -maxn 100
-createDataFile -kind 3 -maxn 100
+createDataFile -kind 1 -maxm 100
+createDataFile -kind 2 -maxm 100
+createDataFile -kind 3 -maxm 100
 
-createDataFile -t 100 -kind 0 -maxn 10000
-createDataFile -t 100 -kind 0 -maxn 10000
-createDataFile -t 100 -kind 0 -maxn 10000
-createDataFile -t 100 -kind 0 -maxn 10000
+createDataFile -t 100 -kind 0 -maxm 1000
+createDataFile -t 100 -kind 0 -maxm 1000
+createDataFile -t 100 -kind 0 -maxm 1000
+createDataFile -t 100 -kind 0 -maxm 1000
 
-createDataFile -t 100000 -kind 0 -maxn 1000000000
-createDataFile -t 100000 -kind 0 -maxn 1000000000
-createDataFile -t 100000 -kind 0 -maxn 1000000000
+createDataFile -t 100000 -kind 0 -maxm 1000000000
+createDataFile -t 100000 -kind 0 -maxm 1000000000
+createDataFile -t 100000 -kind 0 -maxm 1000000000

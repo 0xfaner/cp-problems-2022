@@ -8,8 +8,8 @@ int main(int argc, char** argv) {
     int kind = opt<int>("kind");
     assert(0 <= kind && kind <= 3);
 
-    int maxn = opt<int>("maxn");
-    assert(1 <= maxn && maxn <= 1000000000);
+    int maxm = opt<int>("maxm");
+    assert(1 <= maxm && maxm <= 1000000000);
 
     if (kind == 0) {
         int t = opt<int>("t");
@@ -18,17 +18,17 @@ int main(int argc, char** argv) {
         println(t);
         while (t--) {
             for (int i = 0; i < 2; i++) {
-                std::vector<int> x = rnd.distinct(2, 0, maxn);
+                std::vector<int> x = rnd.distinct(2, 0, maxm);
                 std::sort(x.begin(), x.end());
-                std::vector<int> y = rnd.distinct(2, 0, maxn);
+                std::vector<int> y = rnd.distinct(2, 0, maxm);
                 std::sort(y.begin(), y.end());
                 println(x[0], y[0], x[1], y[1]);
             }
         }
     } else {
-        std::vector<int> x = rnd.distinct(4, 0, maxn);
+        std::vector<int> x = rnd.distinct(4, 0, maxm);
         sort(x.begin(), x.end());
-        std::vector<int> y = rnd.distinct(4, 0, maxn);
+        std::vector<int> y = rnd.distinct(4, 0, maxm);
         sort(y.begin(), y.end());
 
         if (kind == 1) {
