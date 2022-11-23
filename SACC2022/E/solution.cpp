@@ -59,7 +59,7 @@ int main() {
             int x = num[fi];
             for (int i = 0; i < p_num && p[i] * p[i] <= x; i++) {
                 int num = 0;
-                while (x % p[i]) {
+                while (x % p[i] == 0) {
                     x /= p[i];
                     num++;
                 }
